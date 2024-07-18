@@ -35,10 +35,12 @@ WORKDIR /app
 COPY ./install.override.sh .
 COPY ./update_app_version.sh .
 
-# 定义版本参数
-ARG PANEL_BASE_DIR=$PANEL_BASE_DIR
 # 设置环境变量
 ENV PANEL_BASE_DIR=$PANEL_BASE_DIR
+ENV PANEL_PORT=$PANEL_PORT
+ENV PANEL_ENTRANCE=$PANEL_ENTRANCE
+ENV PANEL_USERNAME=$PANEL_USERNAME
+ENV PANEL_PASSWORD=$PANEL_PASSWORD
 # 下载并安装 1Panel
 RUN INSTALL_MODE="stable" && \
     ARCH=$(dpkg --print-architecture) && \
@@ -57,8 +59,6 @@ RUN INSTALL_MODE="stable" && \
 # 设置工作目录为根目录
 WORKDIR /
 
-# 暴露端口 10086
-EXPOSE 10086
 
 # 创建 Docker 套接字的卷
 VOLUME /var/run/docker.sock
