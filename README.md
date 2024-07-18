@@ -5,7 +5,7 @@
 ## 另外我也会针对一些常用好玩的应用做一些视频教程和文字教程，大家可以关注下小up，B站：koryking，公众号：koryking999，什么值得买：koryking。
 
 # docker-compose使用方式
-创建docker-compose.yml文件，将以下内容中的/xxxx/opt替换成你自己的应用安装路径，注意三个地方都需要修改成一样的。
+创建docker-compose.yml文件，将以下内容中的/xxxx/opt替换成你自己的应用安装路径，注意三个/xxxx/opt都需要修改成一样的。
 
 PANEL_PORT=10086 #自定义端口号，不设置默认为10086
 
@@ -14,6 +14,8 @@ PANEL_ENTRANCE=koryking #自定义安全入口，不设置默认为entrance
 PANEL_USERNAME=koryking #自定义用户名，不设置默认为1panel
 
 PANEL_PASSWORD=koryking999 #自定义登录密码，不设置默认为1panel_password
+
+文件上传到本地后执行docker compose up -d
 
 ```huggingface-cli
 services:
