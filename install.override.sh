@@ -1,12 +1,8 @@
 #!/bin/bash
 
-PANEL_BASE_DIR=${PANEL_BASE_DIR} #将固定的/opt改成从环境变量获取
-PANEL_PORT=${PANEL_PORT}
-PANEL_ENTRANCE=${PANEL_ENTRANCE}
+DEFAULT_BASE_DIR=/opt
 DEFAULT_ENTRANCE="entrance"
-PANEL_USERNAME= ${PANEL_USERNAME}
 DEFAULT_USERNAME="1panel"
-PANEL_PASSWORD=${PANEL_PASSWORD}
 DEFAULT_PASSWORD="1panel_password"
 
 CURRENT_DIR=$(
@@ -41,6 +37,7 @@ function Prepare_System(){
 
 function Set_Dir(){
     if [[ ! -d $PANEL_BASE_DIR ]]; then
+        PANEL_BASE_DIR=${PANEL_BASE_DIR:-$DEFAULT_BASE_DIR}
         mkdir -p $PANEL_BASE_DIR
         log "安装路径已设置为 $PANEL_BASE_DIR"
     fi
