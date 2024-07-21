@@ -1,5 +1,5 @@
 # 1panel-docker
-基于[okxlin/docker-1panel](https://github.com/okxlin/docker-1panel)修改了下几个文件，仅解决不使用/opt目录时直接使用应用商店安装应用报错的问题，并将安装目录，端口号，安全入口，用户名和密码放到环境变量中，其他的使用方式和问题都同原项目。
+基于[okxlin/docker-1panel](https://github.com/okxlin/docker-1panel)修改了下几个文件，仅解决不使用/opt目录时直接使用应用商店安装应用报错的问题，其他的使用方式和问题都同原项目。
 刚玩github，不太懂规则，如果有什么做的不对的，欢迎指正。
 
 ## 另外我也会针对一些常用好玩的应用做一些视频教程和文字教程，大家可以关注下小up，B站：koryking，公众号：koryking999，什么值得买：koryking。
