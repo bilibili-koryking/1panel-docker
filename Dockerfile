@@ -35,12 +35,6 @@ WORKDIR /app
 COPY ./install.override.sh .
 COPY ./update_app_version.sh .
 
-# 设置环境变量
-ENV PANEL_BASE_DIR=$PANEL_BASE_DIR
-ENV PANEL_PORT=$PANEL_PORT
-ENV PANEL_ENTRANCE=$PANEL_ENTRANCE
-ENV PANEL_USERNAME=$PANEL_USERNAME
-ENV PANEL_PASSWORD=$PANEL_PASSWORD
 # 下载并安装 1Panel
 RUN INSTALL_MODE="stable" && \
     ARCH=$(dpkg --print-architecture) && \
