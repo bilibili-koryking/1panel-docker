@@ -163,7 +163,6 @@ function Init_Panel(){
 
     RUN_BASE_DIR=$PANEL_BASE_DIR/1panel
     mkdir -p $RUN_BASE_DIR
-    # rm -rf $RUN_BASE_DIR/*
 
     cd ${CURRENT_DIR}
 
